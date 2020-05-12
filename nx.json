@@ -29,13 +29,16 @@
     "api": {
       "tags": []
     },
-    "api-interfaces": {
+    "backend": {
       "tags": []
     },
     "shared-types": {
       "tags": []
     },
     "material": {
+      "tags": []
+    },
+    "api-connector-backend-connector": {
       "tags": []
     }
   }

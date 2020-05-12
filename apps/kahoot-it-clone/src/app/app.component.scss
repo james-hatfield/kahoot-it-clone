@@ -1,9 +1,10 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 500px);
+  grid-gap: 10px;
 }
 
-mat-card {
-  max-width: 400px;
+mat-card-content {
+  overflow: auto;
+  max-height: 300px;
 }
