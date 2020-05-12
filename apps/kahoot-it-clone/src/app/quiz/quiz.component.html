@@ -1,0 +1,10 @@
+<div class="quizBankComponent">
+  <kahoot-it-clone-quiz-bank
+    (selectedQuestion)="handleSelectedQuestion($event)"
+  ></kahoot-it-clone-quiz-bank>
+</div>
+<div class="questionComponent">
+  <kahoot-it-clone-question
+    [questionForm]="selectedQuestion"
+  ></kahoot-it-clone-question>
+</div>

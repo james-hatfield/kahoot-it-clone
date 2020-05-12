@@ -14,6 +14,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizBankComponent } from './quiz/quiz-bank/quiz-bank.component';
+import { QuestionComponent } from './quiz/question/question.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignupComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    QuizComponent,
+    QuizBankComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MaterialModule,
     BackendConnectorModule.forRoot(environment.baseUrl),
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
