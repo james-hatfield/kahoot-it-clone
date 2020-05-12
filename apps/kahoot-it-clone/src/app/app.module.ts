@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '@kahoot-it-clone/material';
+import { environment } from '../environments/environment';
+import { BackendConnectorModule } from '@kahoot-it-clone/api/connector/backend-connector';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +14,8 @@ import { MaterialModule } from '@kahoot-it-clone/material';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    BackendConnectorModule.forRoot(environment.baseUrl)
   ],
   providers: [],
   bootstrap: [AppComponent]

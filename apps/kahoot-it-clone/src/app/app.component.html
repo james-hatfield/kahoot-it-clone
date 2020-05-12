@@ -1,11 +1,17 @@
 <mat-card>
-  <mat-card-title>Test</mat-card-title>
+  <mat-card-header>
+    <mat-card-title>User list</mat-card-title>
+  </mat-card-header>
   <mat-card-content>
-    <mat-form-field>
-      <mat-label>Input</mat-label>
-      <input matInput placeholder="test" />
-    </mat-form-field>
+    <pre>{{ userList | async | json }}</pre>
+  </mat-card-content>
+</mat-card>
 
-    <button mat-raised-button color="primary">test</button>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Quiz list</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <pre>{{ quizList | async | json }}</pre>
   </mat-card-content>
 </mat-card>

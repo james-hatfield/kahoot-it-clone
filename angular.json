@@ -180,9 +180,9 @@
         }
       }
     },
-    "api-interfaces": {
-      "root": "libs/api-interfaces",
-      "sourceRoot": "libs/api-interfaces/src",
+    "backend": {
+      "root": "libs/backend",
+      "sourceRoot": "libs/backend/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -190,17 +190,17 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/api-interfaces/tsconfig.lib.json",
-              "libs/api-interfaces/tsconfig.spec.json"
+              "libs/backend/tsconfig.lib.json",
+              "libs/backend/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": ["**/node_modules/**", "!libs/backend/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/api-interfaces/jest.config.js",
-            "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
+            "jestConfig": "libs/backend/jest.config.js",
+            "tsConfig": "libs/backend/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -243,6 +243,35 @@
           "options": {
             "tsConfig": ["libs/material/tsconfig.lib.json"],
             "exclude": ["**/node_modules/**", "!libs/material/**"]
+          }
+        }
+      }
+    },
+    "api-connector-backend-connector": {
+      "root": "libs/api/connector/backend-connector",
+      "sourceRoot": "libs/api/connector/backend-connector/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/connector/backend-connector/tsconfig.lib.json",
+              "libs/api/connector/backend-connector/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api/connector/backend-connector/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/connector/backend-connector/jest.config.js",
+            "tsConfig": "libs/api/connector/backend-connector/tsconfig.spec.json",
+            "passWithNoTests": true
           }
         }
       }

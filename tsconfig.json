@@ -16,9 +16,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@kahoot-it-clone/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@kahoot-it-clone/backend": ["libs/backend/src/index.ts"],
       "@kahoot-it-clone/shared-types": ["libs/shared-types/src/index.ts"],
-      "@kahoot-it-clone/material": ["libs/material/src/index.ts"]
+      "@kahoot-it-clone/material": ["libs/material/src/index.ts"],
+      "@kahoot-it-clone/api/connector/backend-connector": [
+        "libs/api/connector/backend-connector/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

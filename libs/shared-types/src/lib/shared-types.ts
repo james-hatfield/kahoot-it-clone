@@ -1,4 +1,5 @@
 export interface User {
+  id: string;
   username: string;
   password: string;
   email: string;
@@ -19,6 +20,7 @@ export interface User {
 
 export interface Quiz {
   // question bank that holds all questions in the quiz
+  id: string;
   questionBank: Question[];
 }
 
@@ -28,6 +30,7 @@ export interface Question {
   image: string;
   // multi selected answers or single selected answers, check right type for string,
   // dropdown menu to select
+  value: string; // What is the question
   answerOptions: AnswerOptions;
   answerBank: Answer[];
 }
@@ -37,9 +40,16 @@ export enum AnswerOptions {
   Multi = 'Multi-Select'
 }
 
+export enum Shape {
+  Triangle,
+  Circle,
+  Square,
+  Diamond
+}
+
 export interface Answer {
   // precursor image
-  shape: string;
+  shape: Shape;
   answer: string;
   image: string;
   isCorrect: boolean;
