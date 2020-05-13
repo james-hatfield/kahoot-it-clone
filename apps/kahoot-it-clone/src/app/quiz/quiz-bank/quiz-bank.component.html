@@ -1,1 +1,23 @@
-<h3>QuizBank</h3>
+<section>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div
+      class="example-box"
+      *ngFor="let question of questions.controls; let i = index"
+      cdkDrag
+      (click)="selectQuestion(i)"
+    >
+      question {{ i + 1 }}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="addButton">
+    <button mat-raised-button color="primary" (click)="onAddQuestion()">
+      Add a Question
+    </button>
+  </div>
+  <div>
+    <button mat-raised-button>QuizBank</button>
+  </div>
+</section>

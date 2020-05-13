@@ -10,6 +10,7 @@ import {
 export class AppService {
   userList = this.backendService.userList;
   quizList = this.backendService.quizList;
+  // questionBank = quizData;
 
   constructor(
     @Inject(ConnectorService)

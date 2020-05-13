@@ -10,12 +10,8 @@ import { BackendConnectorModule } from '@kahoot-it-clone/api/connector/backend-c
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizBankComponent } from './quiz/quiz-bank/quiz-bank.component';
 import { QuestionComponent } from './quiz/question/question.component';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatRadioModule } from '@angular/material/radio';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -30,12 +26,8 @@ import { MatRadioModule } from '@angular/material/radio';
     BrowserAnimationsModule,
     MaterialModule,
     BackendConnectorModule.forRoot(environment.baseUrl),
-    MatGridListModule,
     ReactiveFormsModule,
-    MatSliderModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatRadioModule
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
