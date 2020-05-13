@@ -1,10 +1,62 @@
 <mat-card>
   <mat-card-content>
-    <mat-form-field>
-      <mat-label id="questionInput"
-        >Click to start typing your question</mat-label
-      >
-      <input matInput />
-    </mat-form-field>
+    <form [formGroup]="questionForm" class="questionForm">
+      <div>
+        <mat-form-field id="questionInput">
+          <mat-label>Click to start typing your question </mat-label>
+          <input matInput formControlName="question" />
+        </mat-form-field>
+      </div>
+      <div class="parameters">
+        <mat-form-field>
+          <mat-label>Time Limit</mat-label>
+          <input matInput formControlName="timeLimit" />
+        </mat-form-field>
+        <div>
+          <mat-label>Points</mat-label>
+          <mat-slider
+            min="0"
+            max="2000"
+            step="1000"
+            formControlName="points"
+          ></mat-slider>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-label>Answer Options:</mat-label>
+            <input matInput formControlName="answerOptions" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Image:</mat-label>
+            <input matInput formControlName="image" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="answers" formArrayName="answers">
+        <div
+          class="answer"
+          *ngFor="let answer of answers.controls; let i = index"
+        >
+          <ng-container [formGroupName]="i">
+            {{ answer.value.shape }}
+            <mat-form-field>
+              <input matInput formControlName="answer" placeholder="answer" />
+            </mat-form-field>
+            <mat-icon placeholder="image">wallpaper</mat-icon>
+            {{ answer.value.image }}
+            <mat-radio-button
+              [value]="answer.value.isCorrect"
+              (change)="handleRadioButtons(i)"
+            ></mat-radio-button>
+          </ng-container>
+        </div>
+      </div>
+      <button (click)="onSubmit()" mat-raised-button color="primary">
+        Submit
+      </button>
+    </form>
   </mat-card-content>
 </mat-card>

@@ -1,19 +1,13 @@
-.container {
+:host {
   display: grid;
-  grid-template-columns: 40px 50px auto 50px 40px;
-  grid-template-rows: 25% 100px auto;
+  grid-template-columns: 20% 80%;
+  height: 100%;
 }
 
 .component1 {
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
+  background-color: lightpink;
 }
 
 .component2 {
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
+  /* background-color: violet; */
 }

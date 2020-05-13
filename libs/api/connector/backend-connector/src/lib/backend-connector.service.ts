@@ -15,9 +15,7 @@ export class BackendConnectorService implements Connector {
   constructor(
     @Inject(BaseHref) private baseUrl: string,
     private httpClient: HttpClient
-  ) {
-    console.log(baseUrl);
-  }
+  ) {}
 
   userList: Observable<User[]> = this.userListUpdates.pipe(
     // tslint:disable-next-line: deprecation

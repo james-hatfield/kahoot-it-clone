@@ -41,10 +41,10 @@ export enum AnswerOptions {
 }
 
 export enum Shape {
-  Triangle,
-  Circle,
-  Square,
-  Diamond
+  Triangle = 'Triangle',
+  Circle = 'Circle',
+  Square = 'Square',
+  Diamond = 'Diamond'
 }
 
 export interface Answer {
