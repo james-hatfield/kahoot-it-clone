@@ -1,0 +1,17 @@
+.toolbar {
+  display: grid;
+  grid-template-areas: 'a b c d e';
+  grid-template-columns: 40px 50px auto 80px 80px;
+}
+
+.title {
+  grid-area: c;
+  justify-self: center;
+}
+.login {
+  grid-area: e;
+  margin-left: 10px;
+}
+.signup {
+  grid-area: d;
+}

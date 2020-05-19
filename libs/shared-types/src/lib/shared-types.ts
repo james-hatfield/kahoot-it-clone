@@ -3,19 +3,19 @@ export interface User {
   username: string;
   password: string;
   email: string;
-  organization: string;
+  organization?: string;
   // teacher, student, work etc
-  userType: string;
+  userType?: string;
   // what the kahoots are used for
-  workplaceDetails: string;
-  language: string;
-  bio: string;
+  workplaceDetails?: string;
+  language?: string;
+  bio?: string;
   // membership plan
-  plan: string;
-  quiz: Quiz[];
+  plan?: string;
+  quiz?: Quiz[];
   // work with other people on an upgraded membership, maybe dont need right away
   // for functionality
-  teamSpace: string;
+  teamSpace?: string;
 }
 
 export interface Quiz {

@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Connector, BaseHref } from './connector';
 import { Observable, Subject } from 'rxjs';
-import { switchMap, startWith, shareReplay } from 'rxjs/operators';
+import { switchMap, startWith, shareReplay, tap } from 'rxjs/operators';
 import { User, Quiz } from '@kahoot-it-clone/shared-types';
 
 @Injectable({
@@ -32,4 +32,10 @@ export class BackendConnectorService implements Connector {
     switchMap(() => this.httpClient.get<Quiz[]>(this.baseUrl + '/quizes')),
     shareReplay(1)
   );
+
+  createUser(user: User) {
+    return this.httpClient
+      .post<User>(`${this.baseUrl}/users`, user)
+      .pipe(tap(() => this.userListUpdates.next()));
+  }
 }
