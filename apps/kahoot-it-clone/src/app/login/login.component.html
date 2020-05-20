@@ -13,9 +13,14 @@
 
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput formControlName="password" />
+        <input type="password" matInput formControlName="password" />
       </mat-form-field>
-      <button (click)="onSubmit()" mat-raised-button color="primary">
+      <button
+        [disabled]="loginForm.invalid"
+        (click)="onSubmit()"
+        mat-raised-button
+        color="primary"
+      >
         Submit
       </button>
     </form>

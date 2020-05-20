@@ -19,7 +19,6 @@ export class UserService {
 
   createUser(user: User): Observable<User> {
     userData.push(user);
-    console.log(user);
     return of(user);
   }
 }

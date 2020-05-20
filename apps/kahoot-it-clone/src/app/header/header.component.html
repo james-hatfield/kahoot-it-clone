@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar">
+<mat-toolbar class="navbar">
   <span class="title">Kahoot Clone!</span>
   <ng-container *ngIf="currentUser | async; else showThis">
     <button mat-raised-button color="primary" class="signup" (click)="logout()">
@@ -7,11 +7,11 @@
   </ng-container>
 
   <ng-template #showThis>
-    <a mat-raised-button color="primary" class="login" routerLink="/login"
-      >Login!</a
-    >
     <a mat-raised-button color="primary" class="signup" routerLink="/signup"
       >Sign Up!</a
+    >
+    <a mat-raised-button color="primary" class="login" routerLink="/login"
+      >Login!</a
     >
   </ng-template>
 </mat-toolbar>

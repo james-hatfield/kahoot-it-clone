@@ -25,7 +25,7 @@ export class UserController {
   }
 
   @Post()
-  // @HttpCode(HttpStatus.CREATED)
+  @HttpCode(HttpStatus.CREATED)
   createUser(@Body() user: User) {
     console.log(user);
     return this.userService.createUser(user);

@@ -1,17 +1,17 @@
-.toolbar {
+.navbar {
   display: grid;
-  grid-template-areas: 'a b c d e';
+  grid-template-areas: 'col1 col2 col3 col4 col5';
   grid-template-columns: 40px 50px auto 80px 80px;
 }
 
 .title {
-  grid-area: c;
+  grid-area: col3;
   justify-self: center;
 }
-.login {
-  grid-area: e;
-  margin-left: 10px;
-}
 .signup {
-  grid-area: d;
+  grid-area: col4;
+}
+.login {
+  grid-area: col5;
+  margin-left: 10px;
 }

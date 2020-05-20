@@ -23,11 +23,9 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    const email = this.loginForm.get('email').value;
-    const password = this.loginForm.get('password').value;
-
-    if (email && password) {
-      this.authService.login(email, password);
+    const value = this.loginForm.value;
+    if (value) {
+      this.authService.login(value.email, value.password);
     }
   }
 }
