@@ -17,15 +17,13 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = this.fb.group({
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required)
     });
   }
 
   onSubmit() {
     const value = this.loginForm.value;
-    if (value) {
-      this.authService.login(value.email, value.password);
-    }
+    this.authService.login(value.email, value.password);
   }
 }

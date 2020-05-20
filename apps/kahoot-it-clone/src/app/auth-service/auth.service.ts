@@ -52,7 +52,7 @@ export class AuthService {
   }
 
   logout() {
-    this.currentUser = undefined;
+    this.currentUser.next(undefined);
     this.router.navigate(['/login']);
   }
 }

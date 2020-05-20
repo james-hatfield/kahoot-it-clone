@@ -16,7 +16,7 @@
         <input type="password" matInput formControlName="password" />
       </mat-form-field>
       <button
-        [disabled]="loginForm.invalid"
+        [disabled]="!loginForm.valid"
         (click)="onSubmit()"
         mat-raised-button
         color="primary"
