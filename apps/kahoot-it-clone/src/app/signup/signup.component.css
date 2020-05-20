@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card {
+  height: 250px;
+  width: 300px;
+}

@@ -1,0 +1,15 @@
+.navbar {
+  display: grid;
+  grid-template-areas: '. title buttons';
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.title {
+  grid-area: title;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  grid-area: buttons;
+}

@@ -16,4 +16,9 @@ export class UserService {
   getusers(): Observable<User[]> {
     return of(userData);
   }
+
+  createUser(user: User): Observable<User> {
+    userData.push(user);
+    return of(user);
+  }
 }
