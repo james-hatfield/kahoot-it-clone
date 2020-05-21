@@ -6,31 +6,6 @@ import {
   Shape
 } from '@kahoot-it-clone/shared-types';
 
-const question1: Question = {
-  timeLimit: 10,
-  points: 10,
-  image: '',
-  answerOptions: AnswerOptions.Single,
-  answerBank: [],
-  value: 'What is the boiling point of water?'
-};
-const question2: Question = {
-  timeLimit: 10,
-  points: 20,
-  image: '',
-  answerOptions: AnswerOptions.Single,
-  answerBank: [],
-  value: 'Is water wet?'
-};
-const question3: Question = {
-  timeLimit: 10,
-  points: 30,
-  image: '',
-  answerOptions: AnswerOptions.Single,
-  answerBank: [],
-  value: 'What is the freezing point of water?'
-};
-
 const answers1: Answer[] = [
   { shape: Shape.Triangle, image: '', isCorrect: true, answer: '212 F' },
   { shape: Shape.Circle, image: '', isCorrect: false, answer: '200 F' },
@@ -49,6 +24,31 @@ const answers3: Answer[] = [
   { shape: Shape.Triangle, image: '', isCorrect: false, answer: '50 F' },
   { shape: Shape.Diamond, image: '', isCorrect: false, answer: '15 F' }
 ];
+
+const question1: Question = {
+  timeLimit: 10,
+  points: 10,
+  image: '',
+  answerOptions: AnswerOptions.Single,
+  answerBank: answers1,
+  value: 'What is the boiling point of water?'
+};
+const question2: Question = {
+  timeLimit: 10,
+  points: 20,
+  image: '',
+  answerOptions: AnswerOptions.Single,
+  answerBank: answers2,
+  value: 'Is water wet?'
+};
+const question3: Question = {
+  timeLimit: 10,
+  points: 30,
+  image: '',
+  answerOptions: AnswerOptions.Single,
+  answerBank: answers3,
+  value: 'What is the freezing point of water?'
+};
 
 export const quizData: Quiz[] = [
   { id: '1', questionBank: [question1, question2, question3] },

@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100%;
+}
+
+.quizBankComponent {
+  background-color: #e9e9e9;
+}
+
+.questionComponent {
+  background-color: #e9e9e9;
+}
