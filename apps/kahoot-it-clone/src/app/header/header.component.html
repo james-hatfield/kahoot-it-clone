@@ -3,13 +3,30 @@
 
   <div class="buttons">
     <ng-container *ngIf="currentUser | async; else showThis">
-      <button mat-raised-button color="primary" (click)="logout()">
+      <button
+        e2e="logout-button"
+        mat-raised-button
+        color="primary"
+        (click)="logout()"
+      >
         Logout
       </button>
     </ng-container>
     <ng-template #showThis>
-      <a mat-raised-button color="primary" routerLink="/login">Login!</a>
-      <a mat-raised-button color="primary" routerLink="/signup">Sign Up!</a>
+      <a
+        e2e="login-button"
+        mat-raised-button
+        color="primary"
+        routerLink="/login"
+        >Login!</a
+      >
+      <a
+        e2e="signup-button"
+        mat-raised-button
+        color="primary"
+        routerLink="/signup"
+        >Sign Up!</a
+      >
     </ng-template>
   </div>
 </mat-toolbar>
