@@ -15,9 +15,7 @@ export class BackendConnectorService implements Connector {
   constructor(
     @Inject(BaseHref) private baseUrl: string,
     private httpClient: HttpClient
-  ) {
-    console.log(baseUrl);
-  }
+  ) {}
 
   userList: Observable<User[]> = this.userListUpdates.pipe(
     // tslint:disable-next-line: deprecation
@@ -33,7 +31,7 @@ export class BackendConnectorService implements Connector {
     shareReplay(1)
   );
 
-  createUser(user: User) {
+  createUser(user: User): Observable<User> {
     return this.httpClient
       .post<User>(`${this.baseUrl}/users`, user)
       .pipe(tap(() => this.userListUpdates.next()));
