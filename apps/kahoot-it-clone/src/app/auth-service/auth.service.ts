@@ -1,12 +1,13 @@
-import { Injectable, Inject } from '@angular/core';
-import { User } from '@kahoot-it-clone/shared-types';
+import { Inject, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+
 import {
   Connector,
   ConnectorService
 } from '@kahoot-it-clone/api/connector/backend-connector';
-import { take, map } from 'rxjs/operators';
-import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { User } from '@kahoot-it-clone/shared-types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -33,7 +34,7 @@ export class AuthService {
 
       if (user) {
         this.currentUser.next(user);
-        this.router.navigate(['/dashboard']);
+        await this.router.navigate(['/dashboard']);
       } else {
         throw new Error('User not found');
       }
@@ -48,11 +49,17 @@ export class AuthService {
   }
 
   async createUser(user: User) {
-    await this.backendService.createUser(user).toPromise();
+    try {
+      await this.backendService.createUser(user).toPromise();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      await this.router.navigate(['/login']);
+    }
   }
 
-  logout() {
+  async logout() {
     this.currentUser.next(undefined);
-    this.router.navigate(['/login']);
+    await this.router.navigate(['/login']);
   }
 }

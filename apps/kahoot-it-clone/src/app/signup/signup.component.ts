@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {
   FormBuilder,
-  FormGroup,
   FormControl,
+  FormGroup,
   Validators
 } from '@angular/forms';
+
 import { User } from '@kahoot-it-clone/shared-types';
+
 import { AuthService } from '../auth-service/auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'kahoot-it-clone-signup',
@@ -17,11 +18,7 @@ import { Router } from '@angular/router';
 export class SignupComponent {
   signUpForm: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
-  ) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.signUpForm = this.fb.group({
       username: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -32,9 +29,8 @@ export class SignupComponent {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     const user: User = this.signUpForm.value;
-    this.authService.createUser(user);
-    this.router.navigate(['/login']);
+    await this.authService.createUser(user);
   }
 }

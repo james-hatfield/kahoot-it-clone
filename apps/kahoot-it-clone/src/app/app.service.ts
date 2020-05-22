@@ -1,7 +1,8 @@
-import { Injectable, Inject } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+
 import {
-  ConnectorService,
-  Connector
+  Connector,
+  ConnectorService
 } from '@kahoot-it-clone/api/connector/backend-connector';
 
 @Injectable({

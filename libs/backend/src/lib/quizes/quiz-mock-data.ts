@@ -1,8 +1,8 @@
 import {
-  Quiz,
   Answer,
-  Question,
   AnswerOptions,
+  Question,
+  Quiz,
   Shape
 } from '@kahoot-it-clone/shared-types';
 

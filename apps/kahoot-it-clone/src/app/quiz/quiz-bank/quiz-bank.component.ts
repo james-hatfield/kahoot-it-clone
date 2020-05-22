@@ -1,8 +1,9 @@
 import { Component, Output } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { QuizService } from '../quiz-service';
+import { FormGroup } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
-import { FormGroup, Form, FormArray } from '@angular/forms';
+
+import { QuizService } from '../quiz-service';
+
 import { createQuestionGroup } from './quiz-util';
 
 @Component({

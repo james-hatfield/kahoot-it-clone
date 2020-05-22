@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {
   FormBuilder,
-  FormGroup,
   FormControl,
+  FormGroup,
   Validators
 } from '@angular/forms';
+
 import { AuthService } from '../auth-service/auth.service';
 
 @Component({
@@ -22,8 +23,8 @@ export class LoginComponent {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     const value = this.loginForm.value;
-    this.authService.login(value.email, value.password);
+    await this.authService.login(value.email, value.password);
   }
 }

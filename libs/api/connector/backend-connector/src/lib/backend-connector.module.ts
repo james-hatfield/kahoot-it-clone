@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { BaseHref, ConnectorService } from './connector';
 import { BackendConnectorService } from './backend-connector.service';
+import { BaseHref, ConnectorService } from './connector';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],

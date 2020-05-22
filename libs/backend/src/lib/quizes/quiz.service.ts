@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
+
 import { Quiz } from '@kahoot-it-clone/shared-types';
+
 import { quizData } from './quiz-mock-data';
 
 @Injectable()

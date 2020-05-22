@@ -1,14 +1,16 @@
 import {
+  Body,
   Controller,
   Get,
-  Param,
-  Post,
   HttpCode,
   HttpStatus,
-  Body
+  Param,
+  Post
 } from '@nestjs/common';
-import { UserService } from '../users/user.service';
+
 import { User } from '@kahoot-it-clone/shared-types';
+
+import { UserService } from '../users/user.service';
 
 @Controller('/users')
 export class UserController {

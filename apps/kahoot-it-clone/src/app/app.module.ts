@@ -1,23 +1,25 @@
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from '@kahoot-it-clone/material';
-import { environment } from '../environments/environment';
 import { BackendConnectorModule } from '@kahoot-it-clone/api/connector/backend-connector';
-import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { SignupComponent } from './signup/signup.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from '@kahoot-it-clone/material';
+
+import { environment } from '../environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { QuizComponent } from './quiz/quiz.component';
-import { QuizBankComponent } from './quiz/quiz-bank/quiz-bank.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 import { QuestionComponent } from './quiz/question/question.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { QuizBankComponent } from './quiz/quiz-bank/quiz-bank.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [

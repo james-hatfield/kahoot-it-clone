@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { AuthService } from '../auth-service/auth.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent {
   currentUser = this.authService.currentUser;
   constructor(private authService: AuthService) {}
 
-  logout() {
-    this.authService.logout();
+  async logout() {
+    await this.authService.logout();
   }
 }

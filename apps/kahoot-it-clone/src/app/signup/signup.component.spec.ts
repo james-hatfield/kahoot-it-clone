@@ -1,8 +1,10 @@
-import { SignupComponent } from './signup.component';
 import { TestBed } from '@angular/core/testing';
-import { AuthService } from '../auth-service/auth.service';
-import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../auth-service/auth.service';
+
+import { SignupComponent } from './signup.component';
 
 describe('signup', () => {
   let component: SignupComponent;
@@ -35,7 +37,7 @@ describe('signup', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should create user and navigate', () => {
+  it('should create user and navigate', async () => {
     const routerSpy = spyOn(router, 'navigate');
     expect(component.signUpForm.value).toEqual({
       username: '',
@@ -51,7 +53,7 @@ describe('signup', () => {
 
     expect(component.signUpForm.valid).toBe(true);
 
-    component.onSubmit();
+    await component.onSubmit();
     expect(routerSpy).toBeCalledWith(['/login']);
   });
 });
