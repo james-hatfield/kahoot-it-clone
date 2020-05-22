@@ -1,4 +1,5 @@
 import { User } from '@kahoot-it-clone/shared-types';
+
 import { quizData } from '../quizes/quiz-mock-data';
 
 export const userData: User[] = [

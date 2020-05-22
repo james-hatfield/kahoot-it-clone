@@ -1,5 +1,5 @@
-import { Component, Input, Injectable } from '@angular/core';
-import { FormGroup, FormArray, FormControl } from '@angular/forms';
+import { Component, Injectable, Input } from '@angular/core';
+import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'kahoot-it-clone-question',

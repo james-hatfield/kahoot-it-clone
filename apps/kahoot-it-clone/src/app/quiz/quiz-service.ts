@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+
 import { createQuestionGroup } from './quiz-bank/quiz-util';
 
 @Injectable({ providedIn: 'root' })

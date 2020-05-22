@@ -1,6 +1,7 @@
 import { InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User, Quiz } from '@kahoot-it-clone/shared-types';
+
+import { Quiz, User } from '@kahoot-it-clone/shared-types';
 
 export interface Connector {
   userList: Observable<User[]>;

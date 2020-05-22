@@ -1,13 +1,13 @@
 import {
-  headerSignupButton,
-  fillSignUpForm,
-  submitSignupForm,
-  loginForm,
-  fillLoginForm,
-  submitloginForm,
   dashboard,
+  fillLoginForm,
+  fillSignUpForm,
+  headerLoginButton,
   headerLogoutButton,
-  headerLoginButton
+  headerSignupButton,
+  loginForm,
+  submitloginForm,
+  submitSignupForm
 } from '../support/user-auth.po';
 
 describe('User auth story', () => {

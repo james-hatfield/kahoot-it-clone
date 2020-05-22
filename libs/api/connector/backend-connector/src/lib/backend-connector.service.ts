@@ -1,9 +1,11 @@
-import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Connector, BaseHref } from './connector';
+import { Inject, Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { switchMap, startWith, shareReplay, tap } from 'rxjs/operators';
-import { User, Quiz } from '@kahoot-it-clone/shared-types';
+import { shareReplay, startWith, switchMap, tap } from 'rxjs/operators';
+
+import { Quiz, User } from '@kahoot-it-clone/shared-types';
+
+import { BaseHref, Connector } from './connector';
 
 @Injectable({
   providedIn: 'root'

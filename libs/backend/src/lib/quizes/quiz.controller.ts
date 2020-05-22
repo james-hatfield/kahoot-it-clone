@@ -1,4 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
+
 import { QuizService } from '../quizes/quiz.service';
 
 @Controller('/quizes')

@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
+
 import { User } from '@kahoot-it-clone/shared-types';
+
 import { userData } from './user-mock-data';
 
 @Injectable()

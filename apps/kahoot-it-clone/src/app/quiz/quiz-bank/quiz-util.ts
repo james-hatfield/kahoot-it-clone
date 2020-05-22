@@ -1,9 +1,10 @@
 import {
+  FormArray,
   FormBuilder,
-  Validators,
   FormControl,
-  FormArray
+  Validators
 } from '@angular/forms';
+
 import { Shape } from '@kahoot-it-clone/shared-types';
 
 const fb = new FormBuilder();
