@@ -11,7 +11,7 @@ import { AuthService } from '../auth-service/auth.service';
 @Component({
   selector: 'kahoot-it-clone-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   loginForm: FormGroup;

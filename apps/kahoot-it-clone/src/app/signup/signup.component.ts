@@ -13,7 +13,7 @@ import { AuthService } from '../auth-service/auth.service';
 @Component({
   selector: 'kahoot-it-clone-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
   signUpForm: FormGroup;

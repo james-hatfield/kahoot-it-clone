@@ -1,17 +1,16 @@
-<form [formGroup]="loginForm" e2e="login-form">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>
-        Login
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-form-field>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Login
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="loginForm" e2e="login-form">
+      <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
         <input e2e="email-input" matInput formControlName="email" />
       </mat-form-field>
-
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
         <input
           e2e="password-input"
@@ -20,17 +19,21 @@
           formControlName="password"
         />
       </mat-form-field>
-      <button
-        e2e="login-submit-button"
-        [disabled]="!loginForm.valid"
-        (click)="onSubmit()"
-        mat-raised-button
-        color="primary"
-      >
-        Submit
-      </button>
-      <h4>Don't have an account?</h4>
-      <a href="">Sign up here!</a>
-    </mat-card-content>
-  </mat-card>
-</form>
+      <div>
+        <button
+          e2e="login-submit-button"
+          [disabled]="!loginForm.valid"
+          (click)="onSubmit()"
+          mat-raised-button
+          color="primary"
+        >
+          Submit
+        </button>
+      </div>
+      <div class="no-account">
+        <h4>Don't have an account?</h4>
+        <a routerLink="/signup">Sign up here!</a>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
