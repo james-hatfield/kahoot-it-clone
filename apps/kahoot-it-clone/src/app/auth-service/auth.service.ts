@@ -9,9 +9,24 @@ import {
 } from '@kahoot-it-clone/api/connector/backend-connector';
 import { User } from '@kahoot-it-clone/shared-types';
 
+const mockUser: User = {
+  id: '1',
+  username: 'Lostpants',
+  password: 'password',
+  email: 'lostpants404@email.com',
+  organization: 'The Organization',
+  userType: 'Admin', // should be an enum
+  workplaceDetails: 'I work at places',
+  language: 'En',
+  bio: 'This is my bio',
+  plan: 'Kek',
+  quiz: [],
+  teamSpace: 'Another one'
+};
+
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  currentUser = new BehaviorSubject<User | undefined>(undefined);
+  currentUser = new BehaviorSubject<User | undefined>(mockUser);
   users = this.backendService.userList;
 
   constructor(
@@ -44,8 +59,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    const auth = this.currentUser.value !== undefined;
-    return auth;
+    return this.currentUser.value !== undefined;
   }
 
   async createUser(user: User) {

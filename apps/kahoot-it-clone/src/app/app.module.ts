@@ -16,9 +16,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import { QuestionComponent } from './quiz/question/question.component';
-import { QuizBankComponent } from './quiz/quiz-bank/quiz-bank.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { QuizBankComponent } from './quiz-builder/quiz-bank/quiz-bank.component';
+import { QuizBuilderComponent } from './quiz-builder/quiz-builder.component';
+import { QuizQuestionComponent } from './quiz-builder/quiz-question/quiz-question.component';
 import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
@@ -29,9 +29,9 @@ import { SignupComponent } from './signup/signup.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    QuizComponent,
+    QuizBuilderComponent,
     QuizBankComponent,
-    QuestionComponent
+    QuizQuestionComponent
   ],
   imports: [
     BrowserModule,

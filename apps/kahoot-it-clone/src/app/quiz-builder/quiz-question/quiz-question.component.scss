@@ -1,0 +1,97 @@
+:host {
+  background-color: rgb(242, 242, 242);
+  padding: 4rem;
+}
+
+@mixin fancyInput() {
+  &__text {
+    color: #b2b2b2;
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-family: Montserrat;
+    z-index: 1;
+  }
+
+  &__input {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 2;
+    font-size: 3.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + p {
+      opacity: 0;
+    }
+  }
+}
+
+form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+  @include fancyInput();
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 10rem auto;
+}
+
+.answersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 49%);
+  grid-gap: 2rem;
+
+  & mat-card {
+    padding: 0;
+    height: 15rem;
+  }
+
+  .icon {
+    width: 10%;
+    height: 15rem;
+    background-color: red;
+    border-radius: 3px;
+  }
+
+  .answer {
+    display: flex;
+
+    .content {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      @include fancyInput();
+
+      &__input {
+        text-align: left;
+        width: 100%;
+        left: 5%;
+      }
+
+      &__text {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

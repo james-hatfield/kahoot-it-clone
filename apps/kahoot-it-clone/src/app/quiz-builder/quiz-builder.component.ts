@@ -3,10 +3,10 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'kahoot-it-clone-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.css']
+  templateUrl: './quiz-builder.component.html',
+  styleUrls: ['./quiz-builder.component.scss']
 })
-export class QuizComponent {
+export class QuizBuilderComponent {
   selectedQuestion: FormGroup;
   constructor() {}
 

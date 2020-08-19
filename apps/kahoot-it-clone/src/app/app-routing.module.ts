@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth-service/auth-guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { QuizBuilderComponent } from './quiz-builder/quiz-builder.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
@@ -14,9 +14,9 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard]
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'quiz', component: QuizComponent }
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'signup', component: SignupComponent, canActivate: [AuthGuard] },
+  { path: 'quiz-builder', component: QuizBuilderComponent }
 ];
 
 @NgModule({

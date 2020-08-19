@@ -1,0 +1,63 @@
+<form formGroup="questionForm">
+  <mat-card>
+    <mat-card-content class="question">
+      <input type="text" class="question__input" formControlName="value" />
+      <p class="question__text">Click to start typing your question</p>
+    </mat-card-content>
+  </mat-card>
+  <div class="container">
+    <div class="stats-container">
+      <div class="time-limit"></div>
+      <div class="points"></div>
+      <div class="answer-options"></div>
+    </div>
+    <div class="image-container">
+      <span class="material-icons">
+        wallpaper
+      </span>
+      <p>Drag and drop image from your computer</p>
+      <!-- <img src="" alt=""> -->
+      <button>Image library</button>
+      <button>Upload Image</button>
+      <button>Youtube link</button>
+    </div>
+  </div>
+  <div class="answersContainer">
+    <mat-card>
+      <mat-card-content class="answer">
+        <div class="icon"></div>
+        <div class="content">
+          <input type="text" class="content__input" formControlName="value" />
+          <p class="content__text">Add answer 1</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content class="answer">
+        <div class="icon"></div>
+        <div class="content">
+          <input type="text" class="content__input" formControlName="value" />
+          <p class="content__text">Add answer 2</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content class="answer">
+        <div class="icon"></div>
+        <div class="content">
+          <input type="text" class="content__input" formControlName="value" />
+          <p class="content__text">Add answer 3</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content class="answer">
+        <div class="icon"></div>
+        <div class="content">
+          <input type="text" class="content__input" formControlName="value" />
+          <p class="content__text">Add answer 4</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>
